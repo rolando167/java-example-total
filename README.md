@@ -94,5 +94,7 @@ http://localhost:8080/api/example/delete/2
 
 - * 📹
 - * YT - Spring Boot Avanzado - Manejo de excepciones nivel Pro
-
+- * 🗃️
+- * https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/jackson.html
+- *
 ---

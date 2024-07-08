@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.total.api.Dtos.ExampleDto;
+import com.total.api.Dtos.ExampleFindNameDto;
 import com.total.api.Entities.Example;
 import com.total.api.Repositories.ExampleRepository;
 
@@ -31,11 +31,24 @@ public class ExampleServices implements IExampleServices {
     }
 
     @Override
-    public List<ExampleDto> getByName(String name) {
+    public List<ExampleFindNameDto> getByName(String name) {
         List<Example> examples = exampleRepository.getListByName(name);
-        List<ExampleDto> examplesDto = new ArrayList<>();
+        List<ExampleFindNameDto> examplesDto = new ArrayList<>();
         examples.stream().forEach(item ->{
-            ExampleDto exampleDto = new ExampleDto();
+            ExampleFindNameDto exampleDto = new ExampleFindNameDto();
+            exampleDto.setName(item.getName());
+            exampleDto.setLast_name(item.getLast_name());
+            exampleDto.setSalary(item.getSalary());
+            examplesDto.add(exampleDto);
+        });
+        return examplesDto;
+    }
+
+    public List<ExampleFindNameDto> getByName2(String name) {
+        List<Example> examples = exampleRepository.getListByName(name);
+        List<ExampleFindNameDto> examplesDto = new ArrayList<>();
+        examples.stream().forEach(item ->{
+            ExampleFindNameDto exampleDto = new ExampleFindNameDto();
             exampleDto.setName(item.getName());
             exampleDto.setLast_name(item.getLast_name());
             exampleDto.setSalary(item.getSalary());

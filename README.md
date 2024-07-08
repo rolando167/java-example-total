@@ -22,7 +22,7 @@ al momento de crear el proyecto.
 ├─── Controllers
 ├─── Services (classes & interfaces)
 ├─── Repositories
-├─── Dtos
+├─── Dtos (ExampleCreateDto, ExampleUpdateDto, ExampleFindNameDto)
 └─── Entities
 ```
 

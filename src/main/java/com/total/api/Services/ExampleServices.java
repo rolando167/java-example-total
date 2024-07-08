@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.total.api.Dtos.ExampleCreateDto;
 import com.total.api.Dtos.ExampleFindNameDto;
 import com.total.api.Entities.Example;
 import com.total.api.Repositories.ExampleRepository;
@@ -60,7 +61,14 @@ public class ExampleServices implements IExampleServices {
     }
 
     @Override
-    public Example save(Example example) {
+    public Example save(ExampleCreateDto exampleDto) {
+        Example example = Example.builder()
+                .name(exampleDto.getName())
+                .last_name(exampleDto.getLast_name())
+                .status(exampleDto.getStatus())
+                .salary(exampleDto.getSalary())
+                .published(exampleDto.isPublished())
+                .build();
         return exampleRepository.save(example);
     }
 

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.total.api.Dtos.ExampleCreateDto;
 import com.total.api.Entities.Example;
 import com.total.api.Services.ExampleServices;
 
@@ -41,7 +42,7 @@ public class ExampleController {
 
     @GetMapping("/findbyname")
     public ResponseEntity<?> findByName(@RequestParam(name = "nombre") String name) {
-        //.../findbyname?nombre=Lucc
+        // .../findbyname?nombre=Lucc
         return new ResponseEntity<>(
                 exampleServices.getByName(name),
                 null,
@@ -49,10 +50,10 @@ public class ExampleController {
     }
 
     @PostMapping("create")
-    public ResponseEntity<Example> create(@RequestBody Example example) {
+    public ResponseEntity<Example> create(@RequestBody ExampleCreateDto exampleCreateDto) {
 
         return new ResponseEntity<>(
-                exampleServices.save(example),
+                exampleServices.save(exampleCreateDto),
                 HttpStatus.CREATED);
     }
 

@@ -19,10 +19,10 @@ al momento de crear el proyecto.
 
 ## Estructura 📁
 
-# Controllers
-# Services (classes & interfaces)
-# Repositories
-# Entities
+├─── Controllers
+├─── Services (classes & interfaces)
+├─── Repositories
+└─── Entities
 
 ## Accesos
 

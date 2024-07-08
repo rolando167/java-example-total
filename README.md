@@ -90,6 +90,8 @@ http://localhost:8080/api/example/delete/2
 
 - * https://github.com/bezkoder/spring-boot-one-to-many (Handle Exception)
 - * https://github.com/jaaxteam/resfulapi/
-- * 
+
+- * 📹
+- * YT - Spring Boot Avanzado - Manejo de excepciones nivel Pro
 
 ---

@@ -1,7 +1,8 @@
 # ☕ 💠 Documentación de API Example v1.0.0 - 2024
 ## Descripción del proyecto
 
-Este proyecto tiene base Example, para pruebas y uso en general, Crud al 99%
+Este proyecto tiene base Example, para pruebas y uso en general, Crud al 99%.
+Try catcht, Junit, Mockito, handleError messageError, H2.
 
 ![img.png](img.png)
 
@@ -24,7 +25,7 @@ al momento de crear el proyecto.
 ├─── Repositories
 ├─── Dtos (ExampleCreateDto, ExampleUpdateDto, ExampleFindNameDto)
 ├─── Entities
-└─── Exception
+└─── Exceptions
 ```
 
 ## Accesos

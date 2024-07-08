@@ -50,7 +50,7 @@ http://localhost:8080/api/example/find/1
 http://localhost:8080/api/example/findbyname?nombre=Lucc
 ```
 
-### POST (crear Huesped)
+### POST (crear Example)
 ```sh
 http://localhost:8080/api/example/create
 ```

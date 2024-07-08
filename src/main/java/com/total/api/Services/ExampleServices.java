@@ -1,16 +1,18 @@
 package com.total.api.Services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.total.api.Dtos.ExampleDto;
 import com.total.api.Entities.Example;
 import com.total.api.Repositories.ExampleRepository;
 
 @Service
-public class ExampleServices implements IExampleServices{
+public class ExampleServices implements IExampleServices {
     @Autowired
     private ExampleRepository exampleRepository;
 
@@ -22,15 +24,24 @@ public class ExampleServices implements IExampleServices{
     @Override
     public Example getOne(long id) {
         Optional<Example> example = exampleRepository.findById(id);
-        if(example.isPresent()){
+        if (example.isPresent()) {
             return example.get();
         }
         return new Example();
     }
 
     @Override
-    public List<Example> getByName(String name) {
-        return exampleRepository.getListByName(name);
+    public List<ExampleDto> getByName(String name) {
+        List<Example> examples = exampleRepository.getListByName(name);
+        List<ExampleDto> examplesDto = new ArrayList<>();
+        examples.stream().forEach(item ->{
+            ExampleDto exampleDto = new ExampleDto();
+            exampleDto.setName(item.getName());
+            exampleDto.setLast_name(item.getLast_name());
+            exampleDto.setSalary(item.getSalary());
+            examplesDto.add(exampleDto);
+        });
+        return examplesDto;
     }
 
     @Override
@@ -47,7 +58,7 @@ public class ExampleServices implements IExampleServices{
     @Override
     public Example delete(long id) {
         Optional<Example> example = exampleRepository.findById(id);
-        if(example.isPresent()){
+        if (example.isPresent()) {
             exampleRepository.deleteById(id);
             return example.get();
         }
@@ -55,4 +66,3 @@ public class ExampleServices implements IExampleServices{
     }
 
 }
-

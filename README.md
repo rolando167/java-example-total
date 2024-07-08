@@ -2,7 +2,7 @@
 ## Descripción del proyecto
 
 Este proyecto tiene base Example, para pruebas y uso en general, Crud al 99%.
-Try catcht, Junit, Mockito, handleError messageError, H2.
+Try catcht, Junit, Mockito, handleError messageError, H2. application.yml (reviasar)
 
 ![img.png](img.png)
 
@@ -89,6 +89,7 @@ http://localhost:8080/api/example/delete/2
 ## Referencias 📚
 
 - * https://github.com/bezkoder/spring-boot-one-to-many (Handle Exception)
+- * https://github.com/jaaxteam/resfulapi/
 - * 
 
 ---

@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.total.api.Dtos.ExampleFindNameDto;
 import com.total.api.Entities.Example;
@@ -30,11 +31,12 @@ public class ExampleServices implements IExampleServices {
         return new Example();
     }
 
+    @Transactional(readOnly = true)
     @Override
     public List<ExampleFindNameDto> getByName(String name) {
         List<Example> examples = exampleRepository.getListByName(name);
         List<ExampleFindNameDto> examplesDto = new ArrayList<>();
-        examples.stream().forEach(item ->{
+        examples.stream().forEach(item -> {
             ExampleFindNameDto exampleDto = new ExampleFindNameDto();
             exampleDto.setName(item.getName());
             exampleDto.setLast_name(item.getLast_name());
@@ -47,7 +49,7 @@ public class ExampleServices implements IExampleServices {
     public List<ExampleFindNameDto> getByName2(String name) {
         List<Example> examples = exampleRepository.getListByName(name);
         List<ExampleFindNameDto> examplesDto = new ArrayList<>();
-        examples.stream().forEach(item ->{
+        examples.stream().forEach(item -> {
             ExampleFindNameDto exampleDto = new ExampleFindNameDto();
             exampleDto.setName(item.getName());
             exampleDto.setLast_name(item.getLast_name());

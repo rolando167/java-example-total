@@ -23,7 +23,8 @@ al momento de crear el proyecto.
 ├─── Services (classes & interfaces)
 ├─── Repositories
 ├─── Dtos (ExampleCreateDto, ExampleUpdateDto, ExampleFindNameDto)
-└─── Entities
+├─── Entities
+└─── Exception
 ```
 
 ## Accesos
@@ -86,4 +87,7 @@ http://localhost:8080/api/example/delete/2
 
 ## Referencias 📚
 
+- * https://github.com/bezkoder/spring-boot-one-to-many (Handle Exception)
 - * 
+
+---

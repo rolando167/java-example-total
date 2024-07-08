@@ -30,7 +30,7 @@ public class ExampleService implements IExampleService {
         if (example.isPresent()) {
             return example.get();
         }
-        return new Example();
+        return null;
     }
 
     @Transactional(readOnly = true)
@@ -86,7 +86,7 @@ public class ExampleService implements IExampleService {
             exampleRepository.deleteById(id);
             return example.get();
         }
-        return new Example();
+        return null;
     }
 
 }

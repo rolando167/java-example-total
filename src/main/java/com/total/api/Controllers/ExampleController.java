@@ -3,6 +3,7 @@ package com.total.api.Controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.total.api.Dtos.ExampleCreateDto;
 import com.total.api.Dtos.MensajeResponse;
 import com.total.api.Entities.Example;
+import com.total.api.Exceptions.ResourceNotFoundException;
 import com.total.api.Services.ExampleService;
 
 @RestController
@@ -47,9 +49,13 @@ public class ExampleController {
     }
 
     @GetMapping("/find/{id}")
-    public ResponseEntity<?> findById(@PathVariable Long id) {
+    public ResponseEntity<?> findById(@PathVariable(value = "id") Long id) {
+        Example example = exampleServices.getOne(id);
+        if (example == null) {
+            throw new ResourceNotFoundException("Not found Example with id = " + id);
+        }
         return new ResponseEntity<>(
-                exampleServices.getOne(id),
+                example,
                 null,
                 HttpStatus.OK);
     }
@@ -64,11 +70,19 @@ public class ExampleController {
     }
 
     @PostMapping("create")
-    public ResponseEntity<Example> create(@RequestBody ExampleCreateDto exampleCreateDto) {
-
-        return new ResponseEntity<>(
+    public ResponseEntity<?> create(@RequestBody ExampleCreateDto exampleCreateDto) {
+        try {
+            return new ResponseEntity<>(
                 exampleServices.save(exampleCreateDto),
                 HttpStatus.CREATED);
+        } catch (DataAccessException exDt) {
+            return new ResponseEntity<>(
+                MensajeResponse.builder()
+                        .mensaje(exDt.getMessage())
+                        .object(null)
+                        .build(),
+                HttpStatus.OK);
+        }
     }
 
     @PutMapping("update/{id}")
@@ -81,7 +95,11 @@ public class ExampleController {
 
     @DeleteMapping("delete/{id}")
     public ResponseEntity<Example> delete(@PathVariable long id) {
+        Example example = exampleServices.getOne(id);
 
+        if (example == null) {
+            throw new ResourceNotFoundException("Not found Example with id = " + id);
+        }
         return new ResponseEntity<>(
                 exampleServices.delete(id),
                 HttpStatus.OK);

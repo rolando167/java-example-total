@@ -44,4 +44,8 @@ public class Example {
     @UpdateTimestamp
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+     
+    
+
+
 }

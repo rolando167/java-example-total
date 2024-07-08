@@ -55,7 +55,6 @@ public class ExampleControllerTest {
                 1, 1500D, false);
     }
 
-
     @Test
     public void test_GetStudentByNameAndClass() throws Exception {
         when(exampleService.getAll()).thenReturn(listExamples);
@@ -65,7 +64,7 @@ public class ExampleControllerTest {
     }
 
     @Test
-    public void test_GetProductById() throws Exception {
+    public void test_GetExampleById() throws Exception {
         when(exampleService.getOne(eq(1L))).thenReturn(exampleOne);
         this.mockMvc
                 .perform(get(urlController + "/find/{id}", 1L))
@@ -73,7 +72,7 @@ public class ExampleControllerTest {
     }
 
     @Test
-    public void test_AddProducto() throws JsonProcessingException, Exception {
+    public void test_AddExample() throws JsonProcessingException, Exception {
         when(exampleService.save(eq(exampleCreateDto))).thenReturn(exampleOne);
         this.mockMvc
                 .perform(post(urlController + "/create")

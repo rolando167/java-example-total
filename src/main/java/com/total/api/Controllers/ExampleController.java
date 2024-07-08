@@ -85,5 +85,6 @@ public class ExampleController {
         return new ResponseEntity<>(
                 exampleServices.delete(id),
                 HttpStatus.OK);
+        // return ResponseEntity.badRequest().build();
     }
 }

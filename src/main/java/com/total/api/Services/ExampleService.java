@@ -3,6 +3,7 @@ package com.total.api.Services;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,6 +46,19 @@ public class ExampleService implements IExampleService {
             examplesDto.add(exampleDto);
         });
         return examplesDto;
+    }
+
+    public List<ExampleFindNameDto> getByName2(String name) { 
+        //Optional
+        List<ExampleFindNameDto> listExamples = exampleRepository.getListByName(name)
+                .stream()
+                .map(maker -> ExampleFindNameDto.builder()
+                        .name(maker.getName())
+                        .last_name(maker.getLast_name())
+                        .salary(maker.getSalary())
+                        .build())
+                .collect(Collectors.toList());
+        return listExamples;
     }
 
     @Override

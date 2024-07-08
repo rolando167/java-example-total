@@ -47,19 +47,6 @@ public class ExampleServices implements IExampleServices {
         return examplesDto;
     }
 
-    public List<ExampleFindNameDto> getByName2(String name) {
-        List<Example> examples = exampleRepository.getListByName(name);
-        List<ExampleFindNameDto> examplesDto = new ArrayList<>();
-        examples.stream().forEach(item -> {
-            ExampleFindNameDto exampleDto = new ExampleFindNameDto();
-            exampleDto.setName(item.getName());
-            exampleDto.setLast_name(item.getLast_name());
-            exampleDto.setSalary(item.getSalary());
-            examplesDto.add(exampleDto);
-        });
-        return examplesDto;
-    }
-
     @Override
     public Example save(ExampleCreateDto exampleDto) {
         Example example = Example.builder()

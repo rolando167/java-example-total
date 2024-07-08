@@ -81,7 +81,7 @@ public class ExampleController {
                         .mensaje(exDt.getMessage())
                         .object(null)
                         .build(),
-                HttpStatus.OK);
+                HttpStatus.METHOD_NOT_ALLOWED);
         }
     }
 

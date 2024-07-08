@@ -1,5 +1,7 @@
 package com.total.api.Controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.total.api.Dtos.ExampleCreateDto;
+import com.total.api.Dtos.MensajeResponse;
 import com.total.api.Entities.Example;
 import com.total.api.Services.ExampleServices;
 
@@ -26,9 +29,20 @@ public class ExampleController {
 
     @GetMapping("/all")
     public ResponseEntity<?> getAll() {
+        List<Example> listExamples = exampleServices.getAll();
+        if (listExamples.size() == 0) {
+            return new ResponseEntity<>(
+                    MensajeResponse.builder()
+                            .mensaje("No hay registros")
+                            .object(null)
+                            .build(),
+                    HttpStatus.OK);
+        }
         return new ResponseEntity<>(
-                exampleServices.getAll(),
-                null,
+                MensajeResponse.builder()
+                        .mensaje("")
+                        .object(listExamples)
+                        .build(),
                 HttpStatus.OK);
     }
 

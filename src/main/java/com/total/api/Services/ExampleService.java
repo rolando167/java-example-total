@@ -14,7 +14,7 @@ import com.total.api.Entities.Example;
 import com.total.api.Repositories.ExampleRepository;
 
 @Service
-public class ExampleServices implements IExampleServices {
+public class ExampleService implements IExampleService {
     @Autowired
     private ExampleRepository exampleRepository;
 

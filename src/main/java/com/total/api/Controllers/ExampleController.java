@@ -18,14 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.total.api.Dtos.ExampleCreateDto;
 import com.total.api.Dtos.MensajeResponse;
 import com.total.api.Entities.Example;
-import com.total.api.Services.ExampleServices;
+import com.total.api.Services.ExampleService;
 
 @RestController
 @RequestMapping("/api/example")
 public class ExampleController {
 
     @Autowired
-    private ExampleServices exampleServices;
+    private ExampleService exampleServices;
 
     @GetMapping("/all")
     public ResponseEntity<?> getAll() {

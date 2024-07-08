@@ -18,11 +18,12 @@ al momento de crear el proyecto.
 | H2 Database           | https://start.spring.io/ |
 
 ## Estructura 📁
-
+```sh
 ├─── Controllers
 ├─── Services (classes & interfaces)
 ├─── Repositories
 └─── Entities
+```
 
 ## Accesos
 

@@ -2,7 +2,7 @@
 ## Descripción del proyecto
 
 Este proyecto tiene base Example, para pruebas y uso en general, Crud al 99%.
-Try catcht, Junit, Mockito, handleError messageError, H2. application.yml (reviasar)
+Try catcht, Junit, Mockito, handleError messageError, H2. application.yml (revisar)
 
 ![img.png](img.png)
 

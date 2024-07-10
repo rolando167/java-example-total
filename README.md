@@ -27,6 +27,31 @@ al momento de crear el proyecto.
 ├─── Entities
 └─── Exceptions
 ```
+## Config vsCode 🔧
+User Settings.json  ctrl + shif + p
+```sh
+    "workbench.editor.customLabels.patterns": {
+        "**/Entities/**": "${filename}.${extname} - 💎",
+        "**/entities/**": "${filename}.${extname} - 💎",
+        "**/Models/**": "${filename}.${extname} - 💎",
+        "**/models/**": "${filename}.${extname} - 💎",
+        "**/Dtos/**": "${filename}.${extname} - 📮",
+        "**/dtos/**": "${filename}.${extname} - 📮",
+        "**/dto/**": "${filename}.${extname} - 📮",
+        "**/Controllers/**": "${filename}.${extname} - 💊",
+        "**/controllers/**": "${filename}.${extname} - 💊",
+        "**/Exceptions/**": "${filename}.${extname} - 🔋",
+        "**/exceptions/**": "${filename}.${extname} - 🔋",
+        "**/Repositories/**": "${filename}.${extname} - 💿",
+        "**/Repository/**": "${filename}.${extname} - 💿",
+        "**/Services/**": "${filename}.${extname} - 📀",
+        "**/Service/**": "${filename}.${extname} - 📀",
+        "**/service/**": "${filename}.${extname} - 📀",
+        "**/test/**": "${filename}.${extname} - 🔬",
+        "**/main/java/**/**Application.java": "${filename}.${extname} - ☕ "
+        // "**/src/**/index.html": "${dirname}/${filename}" 🔮 🔰 💠 🏆 🎫
+    },
+```
 
 ## Accesos
 
@@ -97,5 +122,6 @@ http://localhost:8080/api/example/delete/2
 - * 🗃️
 - * https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/jackson.html
 - * https://anotherdayanotherbug.wordpress.com/2015/01/07/spring-boot-series-autoconfiguracion-de-jackson/
-- * 
+- * https://code.visualstudio.com/docs/getstarted/userinterface
+- * https://html-css-js.com/html/character-codes/
 ---

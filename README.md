@@ -31,25 +31,26 @@ al momento de crear el proyecto.
 User Settings.json  ctrl + shif + p
 ```sh
     "workbench.editor.customLabels.patterns": {
-        "**/Entities/**": "${filename}.${extname} - 💎",
-        "**/entities/**": "${filename}.${extname} - 💎",
-        "**/Models/**": "${filename}.${extname} - 💎",
-        "**/models/**": "${filename}.${extname} - 💎",
-        "**/Dtos/**": "${filename}.${extname} - 📮",
-        "**/dtos/**": "${filename}.${extname} - 📮",
-        "**/dto/**": "${filename}.${extname} - 📮",
-        "**/Controllers/**": "${filename}.${extname} - 💊",
-        "**/controllers/**": "${filename}.${extname} - 💊",
-        "**/Exceptions/**": "${filename}.${extname} - 🔋",
-        "**/exceptions/**": "${filename}.${extname} - 🔋",
-        "**/Repositories/**": "${filename}.${extname} - 💿",
-        "**/Repository/**": "${filename}.${extname} - 💿",
-        "**/Services/**": "${filename}.${extname} - 📀",
-        "**/Service/**": "${filename}.${extname} - 📀",
-        "**/service/**": "${filename}.${extname} - 📀",
-        "**/test/**": "${filename}.${extname} - 🔬",
+        "**/Entities/**": "${filename}.${extname} 💎",
+        "**/entities/**": "${filename}.${extname} 💎",
+        "**/Models/**": "${filename}.${extname} 💎",
+        "**/models/**": "${filename}.${extname} 💎",
+        "**/Dtos/**": "${filename}.${extname} 🔮",
+        "**/dtos/**": "${filename}.${extname} 🔮",
+        "**/dto/**": "${filename}.${extname} 🔮",
+        "**/Controllers/**": "${filename}.${extname} 💊",
+        "**/controllers/**": "${filename}.${extname} 💊",
+        "**/Exceptions/**": "${filename}.${extname} 🔋",
+        "**/exceptions/**": "${filename}.${extname} 🔋",
+        "**/Repositories/**": "${filename}.${extname} 💿",
+        "**/Repository/**": "${filename}.${extname} 💿",
+        "**/Services/**": "${filename}.${extname} 📀",
+        "**/Service/**": "${filename}.${extname} 📀",
+        "**/service/**": "${filename}.${extname} 📀",
+        "**/test/**": "${filename}.${extname} 🔬",
         "**/main/java/**/**Application.java": "${filename}.${extname} - ☕ "
-        // "**/src/**/index.html": "${dirname}/${filename}" 🔮 🔰 💠 🏆 🎫
+        // "**/src/**/index.html": "${dirname}/${filename}"
+        // 🔮 🔰 💠 🏆 🎫 🔥 💧 🌐 🌍 🍚 🎲 🥌 🌄 🌋 🌅 🕋 💳 📮
     },
 ```
 

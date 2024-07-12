@@ -61,6 +61,11 @@ Activar el Linked Editing(para etiquetas HTML)
  Desactivar: breadcrumbs (Opcional)
  Activar: sticky scroll (queda el bloque el nombre actual)
 ```
+En application.properties
+```
+server.servlet.context-path=/api (funciono)
+#spring.data.rest.basePath=/api (no F)
+```
 
 ## Accesos
 
@@ -128,6 +133,8 @@ http://localhost:8080/api/example/delete/2
 
 - * 📹
 - * YT - Spring Boot Avanzado - Manejo de excepciones nivel Pro
+- * Java :How to set base url for rest in spring boot?(5solution)
+- *
 - * 🗃️
 - * https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/jackson.html
 - * https://anotherdayanotherbug.wordpress.com/2015/01/07/spring-boot-series-autoconfiguracion-de-jackson/

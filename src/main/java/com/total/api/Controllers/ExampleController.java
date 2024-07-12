@@ -22,8 +22,13 @@ import com.total.api.Entities.Example;
 import com.total.api.Exceptions.ResourceNotFoundException;
 import com.total.api.Services.ExampleService;
 
+/*
+ * Author: RH
+ * Updated at: 12-07-2024
+*/
+
 @RestController
-@RequestMapping("/api/example")
+@RequestMapping("/example")
 public class ExampleController {
 
     @Autowired

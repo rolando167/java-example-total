@@ -25,7 +25,7 @@ public class ExampleService implements IExampleService {
     }
 
     @Override
-    public Example getOne(long id) {
+    public Example getOne(Long id) {
         Optional<Example> example = exampleRepository.findById(id);
         if (example.isPresent()) {
             return example.get();
@@ -74,13 +74,13 @@ public class ExampleService implements IExampleService {
     }
 
     @Override
-    public Example update(Example example, long id) {
+    public Example update(Example example, Long id) {
         example.setId(id);
         return exampleRepository.save(example);
     }
 
     @Override
-    public Example delete(long id) {
+    public Example delete(Long id) {
         Optional<Example> example = exampleRepository.findById(id);
         if (example.isPresent()) {
             exampleRepository.deleteById(id);

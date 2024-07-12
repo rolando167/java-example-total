@@ -4,6 +4,8 @@
 Este proyecto tiene base Example, para pruebas y uso en general, Crud al 99%.
 Try catcht, Junit, Mockito, handleError messageError, H2. application.yml (revisar)
 
+Logs - Logger, configuracion en application.properties
+
 ![img.png](img.png)
 
 ## Recursos
@@ -141,4 +143,8 @@ http://localhost:8080/api/example/delete/2
 - * https://code.visualstudio.com/docs/getstarted/userinterface
 - * https://html-css-js.com/html/character-codes/
 - * https://www.indiabix.com/online-test/java-programming-test/ (test java online questions)
+- * https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-logging.html
+- * https://docs.spring.io/spring-boot/reference/features/logging.html
+- * https://stackoverflow.com/questions/39158191/default-logging-file-for-spring-boot-application
+- * 
 ---

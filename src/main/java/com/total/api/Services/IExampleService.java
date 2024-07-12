@@ -8,9 +8,9 @@ import com.total.api.Entities.Example;
 
 public interface IExampleService {
     public List<Example> getAll();
-    public Example getOne(long id);
+    public Example getOne(Long id);
     public List<ExampleFindNameDto> getByName(String name);
     public Example save(ExampleCreateDto exampleDto);
-    public Example update(Example example, long id);
-    public Example delete(long id);
+    public Example update(Example example, Long id);
+    public Example delete(Long id);
 }

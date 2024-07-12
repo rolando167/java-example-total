@@ -2,6 +2,8 @@ package com.total.api.Controllers;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.total.api.Dtos.ExampleCreateDto;
@@ -28,8 +31,10 @@ import com.total.api.Services.ExampleService;
 */
 
 @RestController
-@RequestMapping("/example")
+@RequestMapping("example")
 public class ExampleController {
+
+    private static Logger logger = LoggerFactory.getLogger(ExampleController.class);
 
     @Autowired
     private ExampleService exampleServices;
@@ -91,7 +96,7 @@ public class ExampleController {
     }
 
     @PutMapping("update/{id}")
-    public ResponseEntity<Example> update(@RequestBody Example example, @PathVariable long id) {
+    public ResponseEntity<Example> update(@RequestBody Example example, @PathVariable Long id) {
 
         return new ResponseEntity<>(
                 exampleServices.update(example, id),
@@ -99,7 +104,7 @@ public class ExampleController {
     }
 
     @DeleteMapping("delete/{id}")
-    public ResponseEntity<Example> delete(@PathVariable long id) {
+    public ResponseEntity<Example> delete(@PathVariable Long id) {
         Example example = exampleServices.getOne(id);
 
         if (example == null) {
@@ -110,4 +115,15 @@ public class ExampleController {
                 HttpStatus.OK);
         // return ResponseEntity.badRequest().build();
     }
+
+    @GetMapping("test/{id}")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void testLogger(@PathVariable( required = false) Long id, @RequestBody Example example) {
+        if(id != null){
+            logger.debug("Obteniendo datos example con id {} y data {}", id, example);
+        }
+        logger.info("Logger info");
+        logger.warn("Logger warn");
+        logger.error("Logger error");
+	}
 }

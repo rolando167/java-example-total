@@ -83,15 +83,15 @@ public class ExampleController {
     public ResponseEntity<?> create(@RequestBody ExampleCreateDto exampleCreateDto) {
         try {
             return new ResponseEntity<>(
-                exampleServices.save(exampleCreateDto),
-                HttpStatus.CREATED);
+                    exampleServices.save(exampleCreateDto),
+                    HttpStatus.CREATED);
         } catch (DataAccessException exDt) {
             return new ResponseEntity<>(
-                MensajeResponse.builder()
-                        .mensaje(exDt.getMessage())
-                        .object(null)
-                        .build(),
-                HttpStatus.METHOD_NOT_ALLOWED);
+                    MensajeResponse.builder()
+                            .mensaje(exDt.getMessage())
+                            .object(null)
+                            .build(),
+                    HttpStatus.METHOD_NOT_ALLOWED);
         }
     }
 
@@ -117,13 +117,11 @@ public class ExampleController {
     }
 
     @GetMapping("test/{id}")
-	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void testLogger(@PathVariable( required = false) Long id, @RequestBody Example example) {
-        if(id != null){
-            logger.debug("Obteniendo datos example con id {} y data {}", id, example);
-        }
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void testLogger(@PathVariable Long id, @RequestBody Example example) {
+        logger.debug("Obteniendo datos example con id {} y data {}", id, example);
         logger.info("Logger info");
         logger.warn("Logger warn");
         logger.error("Logger error");
-	}
+    }
 }

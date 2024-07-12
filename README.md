@@ -53,6 +53,12 @@ User Settings.json  ctrl + shif + p
         // 🔮 🔰 💠 🏆 🎫 🔥 💧 🌐 🌍 🍚 🎲 🥌 🌄 🌋 🌅 🕋 💳 📮
     },
 ```
+Activar el Linked Editing(para etiquetas HTML)
+```
+ Ir a preferencias usuario y busca: Linked Editing y activar.
+ Activar: Bracket Pair Colorization: Enabled (color a las { } )
+ Activar: Bracket Pairs (Colo linea del bloque del cursor)
+```
 
 ## Accesos
 

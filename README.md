@@ -133,4 +133,5 @@ http://localhost:8080/api/example/delete/2
 - * https://anotherdayanotherbug.wordpress.com/2015/01/07/spring-boot-series-autoconfiguracion-de-jackson/
 - * https://code.visualstudio.com/docs/getstarted/userinterface
 - * https://html-css-js.com/html/character-codes/
+- * https://www.indiabix.com/online-test/java-programming-test/ (test java online questions)
 ---

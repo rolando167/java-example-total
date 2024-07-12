@@ -126,6 +126,17 @@ Hay que insertar un JSON para esta petición.
 ```sh
 http://localhost:8080/api/example/delete/2
 ```
+### TEST - Logger
+```sh
+http://localhost:8080/api/example/test/1
+
+- Ingresar json
+{
+    "id": 450,
+    "name": "Raikod",
+    "last_name": "Gamer"
+}
+```
 
 ## Referencias 📚
 

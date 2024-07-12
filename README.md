@@ -135,8 +135,8 @@ http://localhost:8080/api/example/delete/2
 
 - * 📹
 - * YT - Spring Boot Avanzado - Manejo de excepciones nivel Pro
-- * Java :How to set base url for rest in spring boot?(5solution)
-- *
+- * YT - Java :How to set base url for rest in spring boot?(5solution)
+- * YT - https://www.youtube.com/watch?v=lGrcZsw-hKQ
 - * 🗃️
 - * https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/jackson.html
 - * https://anotherdayanotherbug.wordpress.com/2015/01/07/spring-boot-series-autoconfiguracion-de-jackson/

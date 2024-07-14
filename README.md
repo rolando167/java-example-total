@@ -6,6 +6,8 @@ Try catcht, Junit, Mockito, handleError messageError, H2. application.yml (revis
 
 Logs - Logger, configuracion en application.properties
 
+Proximamente spring validation - libreria (0%)
+
 ![img.png](img.png)
 
 ## Recursos

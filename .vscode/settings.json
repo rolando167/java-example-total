@@ -1,0 +1,16 @@
+{
+    "material-icon-theme.activeIconPack": "nest",
+    "material-icon-theme.folders.associations": {
+        "Dtos": "Lua",
+        "Dto": "Lua",
+        "main": "java",
+        "Entities": "vm",
+        "repositories": "Flow",
+        "exceptions": "supabase",
+    },
+    "material-icon-theme.files.associations": {
+        "*.routes.ts": "Routing",
+        // "**.json": "json",
+        // "fileName.ts": "angular"
+    }
+}

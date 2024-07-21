@@ -12,5 +12,6 @@
         "*.routes.ts": "Routing",
         // "**.json": "json",
         // "fileName.ts": "angular"
-    }
+    },
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

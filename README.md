@@ -6,7 +6,7 @@ Try catcht, Junit, Mockito, handleError messageError, H2. application.yml (revis
 
 Logs - Logger, configuracion en application.properties
 
-Proximamente spring validation - libreria (0%)
+Proximamente spring validation - libreria (0%) - Agregar dependencia desde vscode - en pom.xml ctrl+entr en link
 
 ![img.png](img.png)
 
@@ -14,13 +14,14 @@ Proximamente spring validation - libreria (0%)
 El proyecto esta creado con las siguientes tecnologías, las primeras 5 se obtienen
 al momento de crear el proyecto.
 
-| Plugin                | URL                      |
-|-----------------------|--------------------------|
-| Spring Web            | https://start.spring.io/ |
-| Spring Data JPA       | https://start.spring.io/ |
-| Spring Boot Dev tools | https://start.spring.io/ |
-| Lombok                | https://start.spring.io/ |
-| H2 Database           | https://start.spring.io/ |
+|  N° | Plugin                | URL                      |
+|-----|-----------------------|--------------------------|
+|  1  | Spring Web            | https://start.spring.io/ |
+|  2  | Spring Data JPA       | https://start.spring.io/ |
+|  3  | Spring Boot Dev tools | https://start.spring.io/ |
+|  4  | Spring validation     | https://start.spring.io/ |
+|  5  | Lombok                | https://start.spring.io/ |
+|  6  | H2 Database           | https://start.spring.io/ |
 
 ## Estructura 📁
 ```sh

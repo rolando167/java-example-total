@@ -44,13 +44,14 @@ public class ExampleControllerTest {
     @BeforeEach
     public void setUp() throws JsonProcessingException {
         this.listExamples = Arrays.asList(new Example(1L, "Lucc", "Arias",
-                1, 1500D, false, LocalDateTime.now(), LocalDateTime.now()),
+                1, "lucc@tes.com", 1500D, false, LocalDateTime.now(), LocalDateTime.now()),
                 new Example(2L, "Yari", "Martinez",
-                        1, 2000D, false, LocalDateTime.now(), LocalDateTime.now()));
+                        1, "yari@tes.com", 2000D, false, LocalDateTime.now(),
+                        LocalDateTime.now()));
         this.exampleOne = new Example(1L, "Lucc", "Arias",
-                1, 1500D, false, LocalDateTime.now(), LocalDateTime.now());
+                1, "lucc@tes.com", 1500D, false, LocalDateTime.now(), LocalDateTime.now());
         this.exampleCreateDto = new ExampleCreateDto("Lucc", "Arias",
-                1, 1500D, false);
+                "lucc@tes.com", 1, 1500D, false);
     }
 
     @Test

@@ -164,4 +164,6 @@ http://localhost:8080/api/example/test/1
 - * (validations) https://www.baeldung.com/spring-boot-bean-validation
 - * (validations) https://gustavopeiretti.com/spring-boot-rest-ejemplo-restcontroller-requestbody-valid/
 - * (validations) https://reflectoring.io/bean-validation-with-spring-boot/
+- * (validations) https://www.baeldung.com/java-bean-validation-not-null-empty-blank
+- * 
 ---

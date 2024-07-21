@@ -11,5 +11,4 @@ public class ApiSubError {
         this.message = message;
     }
 
-    
 }

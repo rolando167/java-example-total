@@ -2,6 +2,9 @@ package com.total.api.Dtos;
 
 import java.io.Serializable;
 
+import org.hibernate.validator.constraints.CreditCardNumber;
+
+import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Email;
@@ -30,6 +33,7 @@ public class ExampleCreateDto implements Serializable {
 
     @Email
     @NotBlank(message = "Email may not be null")
+    // @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")
     private String email;
 
     @Min(value = 1)
@@ -44,5 +48,23 @@ public class ExampleCreateDto implements Serializable {
     @DecimalMax(value = "9999.99")
     private Double salary;
 
+    @AssertTrue // || @AssertFalse
     private boolean published;
+
+    // @Digits(integer = 1, fraction = 2, message = "The number received is invalid")
+    // @NotNull(message = "height can't be null")
+    // private double height;
+
+    // @Past(message = "The date must be before the current date")
+    // private LocalDate dateOfBirth;
+
+    // @Future(message = "The date must be before the current date")
+    // || @PastOrPresent || @FutureOrPresent
+    // private LocalDate dateOfRenovation;
+
+    // @CreditCardNumber
+    // private Long phone;
+
+    // @Valid
+    // private DepartmentDTO departmentDTO;
 }

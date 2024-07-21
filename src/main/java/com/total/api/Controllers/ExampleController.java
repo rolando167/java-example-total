@@ -83,8 +83,8 @@ public class ExampleController {
     @PostMapping("create")
     public ResponseEntity<?> create(@RequestBody @Valid ExampleCreateDto exampleCreateDto) {
         return new ResponseEntity<>(
-            exampleServices.save(exampleCreateDto),
-            HttpStatus.CREATED);
+                exampleServices.save(exampleCreateDto),
+                HttpStatus.CREATED);
     }
 
     @PutMapping("update/{id}")

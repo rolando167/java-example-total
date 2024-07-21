@@ -143,14 +143,19 @@ http://localhost:8080/api/example/test/1
 
 ## Referencias 📚
 
-- * https://github.com/bezkoder/spring-boot-one-to-many (Handle Exception)
+- * (Handle Excep) https://github.com/bezkoder/spring-boot-one-to-many
 - * https://github.com/jaaxteam/resfulapi/
 - * https://github.com/jorgemezapaz/AdvancedLevelException
-
+- * (valida) https://github.com/UnProgramadorNaceOfficial/spring-boot-validations
+--*
 - * 📹
 - * YT - Spring Boot Avanzado - Manejo de excepciones nivel Pro
 - * YT - Java :How to set base url for rest in spring boot?(5solution)
 - * YT - https://www.youtube.com/watch?v=lGrcZsw-hKQ
+- * YT - Spring Boot: Validación de Formularios - Parte 1
+- * yt - Manejo de excepciones y validación de solicitudes en Spring Boot API REST Exception Hander y @Valid
+- * 
+--*
 - * 🗃️
 - * https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/jackson.html
 - * https://anotherdayanotherbug.wordpress.com/2015/01/07/spring-boot-series-autoconfiguracion-de-jackson/

@@ -146,7 +146,7 @@ http://localhost:8080/api/example/test/1
 - * (Handle Excep) https://github.com/bezkoder/spring-boot-one-to-many
 - * https://github.com/jaaxteam/resfulapi/
 - * https://github.com/jorgemezapaz/AdvancedLevelException
-- * (valida) https://github.com/UnProgramadorNaceOfficial/spring-boot-validations
+- * (valida & Handle Excep) https://github.com/UnProgramadorNaceOfficial/spring-boot-validations
 --*
 - * 📹
 - * YT - Spring Boot Avanzado - Manejo de excepciones nivel Pro

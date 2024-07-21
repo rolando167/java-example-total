@@ -2,6 +2,7 @@ package com.total.api.Dtos;
 
 import java.io.Serializable;
 
+import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
@@ -19,7 +20,7 @@ import lombok.Data;
 @Builder
 public class ExampleCreateDto implements Serializable {
     @NotNull(message = "Name may not be null") // not -> null
-    @NotEmpty(message = "Name may not be empty")// not -> ""
+    @NotEmpty(message = "Name may not be empty") // not -> ""
     @Size(min = 2, max = 32, message = "Name must be between 2 and 32 characters long")
     @NotBlank(message = "Name may not be blank") // not -> " " & null
     private String name;
@@ -40,6 +41,7 @@ public class ExampleCreateDto implements Serializable {
     private Integer status;
 
     @DecimalMin(value = "0.1", message = "El salario no puede ser menor a 0")
+    @DecimalMax(value = "9999.99")
     private Double salary;
 
     private boolean published;

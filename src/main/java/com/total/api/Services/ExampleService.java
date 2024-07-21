@@ -48,8 +48,8 @@ public class ExampleService implements IExampleService {
         return examplesDto;
     }
 
-    public List<ExampleFindNameDto> getByName2(String name) { 
-        //Optional
+    public List<ExampleFindNameDto> getByName2(String name) {
+        // Optional
         List<ExampleFindNameDto> listExamples = exampleRepository.getListByName(name)
                 .stream()
                 .map(maker -> ExampleFindNameDto.builder()
@@ -66,6 +66,7 @@ public class ExampleService implements IExampleService {
         Example example = Example.builder()
                 .name(exampleDto.getName())
                 .last_name(exampleDto.getLast_name())
+                .email(exampleDto.getEmail())
                 .status(exampleDto.getStatus())
                 .salary(exampleDto.getSalary())
                 .published(exampleDto.isPublished())

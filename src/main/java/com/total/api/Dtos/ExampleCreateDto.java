@@ -22,7 +22,7 @@ import lombok.Data;
 public class ExampleCreateDto implements Serializable {
     @NotNull(message = "Name may not be null") // not -> null
     @NotEmpty(message = "Name may not be empty") // not -> ""
-    @Size(min = 2, max = 32, message = "Name must be between 2 and 32 characters long")
+    //@Size(min = 2, max = 32, message = "Name must be between 2 and 32 characters long")
     @NotBlank(message = "Name may not be blank") // not -> " " & null
     private String name;
 

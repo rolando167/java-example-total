@@ -25,6 +25,8 @@ import com.total.api.Entities.Example;
 import com.total.api.Exceptions.ResourceNotFoundException;
 import com.total.api.Services.ExampleService;
 
+import jakarta.validation.Valid;
+
 /*
  * Author: RH
  * Updated at: 12-07-2024
@@ -80,19 +82,10 @@ public class ExampleController {
     }
 
     @PostMapping("create")
-    public ResponseEntity<?> create(@RequestBody ExampleCreateDto exampleCreateDto) {
-        try {
-            return new ResponseEntity<>(
-                    exampleServices.save(exampleCreateDto),
-                    HttpStatus.CREATED);
-        } catch (DataAccessException exDt) {
-            return new ResponseEntity<>(
-                    MensajeResponse.builder()
-                            .mensaje(exDt.getMessage())
-                            .object(null)
-                            .build(),
-                    HttpStatus.METHOD_NOT_ALLOWED);
-        }
+    public ResponseEntity<?> create(@RequestBody @Valid ExampleCreateDto exampleCreateDto) {
+        return new ResponseEntity<>(
+            exampleServices.save(exampleCreateDto),
+            HttpStatus.CREATED);
     }
 
     @PutMapping("update/{id}")

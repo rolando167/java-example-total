@@ -173,7 +173,7 @@ http://localhost:8080/api/example/test/1
 - * (Handle Excep) https://reflectoring.io/spring-boot-exception-handling/
 - * (Handle Excep) https://www.toptal.com/java/spring-boot-rest-api-error-handling
 - * (Handle Excep) https://salithachathuranga94.medium.com/validation-and-exception-handling-in-spring-boot-51597b580ffd
-- * (Handle Excep) https://salithachathuranga94.medium.com/validation-and-exception-handling-in-spring-boot-51597b580ffd
+
 - * (validations) https://www.baeldung.com/spring-boot-bean-validation
 - * (validations) https://gustavopeiretti.com/spring-boot-rest-ejemplo-restcontroller-requestbody-valid/
 - * (validations) https://reflectoring.io/bean-validation-with-spring-boot/

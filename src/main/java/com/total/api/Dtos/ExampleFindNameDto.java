@@ -14,5 +14,6 @@ import lombok.NoArgsConstructor;
 public class ExampleFindNameDto implements Serializable {
     private String name;
     private String last_name;
+    private String email;
     private Double salary;
 }

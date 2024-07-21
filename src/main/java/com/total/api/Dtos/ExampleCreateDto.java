@@ -12,6 +12,7 @@ import lombok.Data;
 public class ExampleCreateDto implements Serializable {
     private String name;
     private String last_name;
+    private String email;
     private Integer status;
     private Double salary;
     private boolean published;

@@ -26,12 +26,18 @@ public class Example {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name = "name")
+
+    @Column(name = "name", columnDefinition = "VARCHAR(100)")
     private String name;
-    @Column(name = "last_name")
+
+    @Column(name = "last_name", columnDefinition = "VARCHAR(100)")
     private String last_name;
+
     @Column(name = "status")
     private Integer status;
+
+    @Column(name = "email", length = 30, nullable = false, unique = true)
+    private String email;
 
     @Column(name = "salary")
     private Double salary;
@@ -42,7 +48,7 @@ public class Example {
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime created_at;
     @UpdateTimestamp
-    @Column(name = "updated_at")
+    @Column(name = "updated_at", columnDefinition = "DATE")
     private LocalDateTime updatedAt;
 
 }

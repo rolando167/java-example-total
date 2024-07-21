@@ -6,7 +6,9 @@ Try catcht, Junit, Mockito, handleError messageError, H2. application.yml (revis
 
 Logs - Logger, configuracion en application.properties
 
-Proximamente spring validation - libreria Agregar dependencia desde vscode - en pom.xml ctrl+entr en link
+ Spring validation para DTO Crear - libreria Agregar dependencia desde vscode - en pom.xml ctrl+entr en link
+
+ Error Handle "ErrorMessage.java"- Formato JsonFormat Fecha con "jackson"
 
 ![img.png](img.png)
 
@@ -104,8 +106,10 @@ Hay que insertar un JSON para esta petición.
 {
     "name":"Lucc",
     "last_name":"Arias",
+    "email": "lucca@tes.com",
     "status": 1,
-    "salary":1800.50
+    "salary":1800.50,
+    "published": true
 }
 ```
 

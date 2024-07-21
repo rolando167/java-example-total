@@ -2,8 +2,6 @@ package com.total.api.Dtos;
 
 import java.io.Serializable;
 
-import org.hibernate.validator.constraints.CreditCardNumber;
-
 import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
@@ -51,7 +49,8 @@ public class ExampleCreateDto implements Serializable {
     @AssertTrue // || @AssertFalse
     private boolean published;
 
-    // @Digits(integer = 1, fraction = 2, message = "The number received is invalid")
+    // @Digits(integer = 1, fraction = 2, message = "The number received is
+    // invalid")
     // @NotNull(message = "height can't be null")
     // private double height;
 

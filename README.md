@@ -167,6 +167,7 @@ http://localhost:8080/api/example/test/1
 - * https://stackoverflow.com/questions/39158191/default-logging-file-for-spring-boot-application
 - * https://armel.soro.io/handling-yaml-in-spring-rest-apis/
 - * (Handle Excep) https://reflectoring.io/spring-boot-exception-handling/
+- * (Handle Excep) https://www.toptal.com/java/spring-boot-rest-api-error-handling
 - * (validations) https://www.baeldung.com/spring-boot-bean-validation
 - * (validations) https://gustavopeiretti.com/spring-boot-rest-ejemplo-restcontroller-requestbody-valid/
 - * (validations) https://reflectoring.io/bean-validation-with-spring-boot/

@@ -31,6 +31,7 @@ public class ExampleCreateDto implements Serializable {
     @Email
     @NotBlank(message = "Email may not be null")
     // @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")
+    @NotNull(message = "Email may not be null") // not -> null
     private String email;
 
     @Min(value = 1)

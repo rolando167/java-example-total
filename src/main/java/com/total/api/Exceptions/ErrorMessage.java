@@ -10,15 +10,15 @@ public class ErrorMessage {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
     private LocalDateTime timestamp;
     private String message;
-    private String description;
+    private String path;
     private List<ApiSubError> subErrors;
 
-    public ErrorMessage(int statusCode, LocalDateTime timestamp, String message, String description,
+    public ErrorMessage(int statusCode, LocalDateTime timestamp, String message, String path,
             List<ApiSubError> subErrors) {
         this.statusCode = statusCode;
         this.timestamp = timestamp;
         this.message = message;
-        this.description = description;
+        this.path = path;
         this.subErrors = subErrors;
     }
 
@@ -34,8 +34,8 @@ public class ErrorMessage {
         return message;
     }
 
-    public String getDescription() {
-        return description;
+    public String getPath() {
+        return path;
     }
 
     public List<ApiSubError> getSubErrors() {

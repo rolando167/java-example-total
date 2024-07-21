@@ -41,6 +41,7 @@ public class Example {
 
     @Column(name = "salary")
     private Double salary;
+
     @Column(name = "published")
     private boolean published;
 

@@ -1,8 +1,11 @@
 package com.total.api.Exceptions;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -18,15 +21,36 @@ public class ControllerExceptionHandler {
     public ErrorMessage resourceNotFoundException(ResourceNotFoundException ex, WebRequest request) {
         ErrorMessage message = new ErrorMessage(
                 HttpStatus.NOT_FOUND.value(),
-                new Date(),
+                LocalDateTime.now(),
                 ex.getMessage(),
-                request.getDescription(false));
+                request.getDescription(false),
+                new ArrayList<>());
 
         return message;
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public Map<String, String> handleInvalidArguments(MethodArgumentNotValidException exception) {
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
+    public ErrorMessage handleInvalidArguments(MethodArgumentNotValidException exception, WebRequest request) {
+        List<ApiSubError> errors = new ArrayList<>();
+
+        exception.getBindingResult().getFieldErrors().forEach(error -> {
+            ApiSubError apiSubError = new ApiSubError();
+            apiSubError.setMessage(error.getDefaultMessage());
+            errors.add(apiSubError);
+        });
+
+        ErrorMessage message = new ErrorMessage(
+                HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                LocalDateTime.now(),
+                exception.getDetailMessageCode(),
+                request.getDescription(false),
+                errors);
+        return message;
+    }
+
+    // @ExceptionHandler(MethodArgumentNotValidException.class)
+    public Map<String, String> handleInvalidArgumentsBasico(MethodArgumentNotValidException exception) {
         Map<String, String> errors = new HashMap<>();
 
         exception.getBindingResult().getFieldErrors().forEach(error -> {
@@ -40,9 +64,10 @@ public class ControllerExceptionHandler {
     public ErrorMessage globalExceptionHandler(Exception ex, WebRequest request) {
         ErrorMessage message = new ErrorMessage(
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                new Date(),
+                LocalDateTime.now(),
                 ex.getMessage(),
-                request.getDescription(false));
+                request.getDescription(false),
+                new ArrayList<>());
 
         return message;
     }

@@ -6,7 +6,7 @@ Try catcht, Junit, Mockito, handleError messageError, H2. application.yml (revis
 
 Logs - Logger, configuracion en application.properties
 
-Proximamente spring validation - libreria (0%) - Agregar dependencia desde vscode - en pom.xml ctrl+entr en link
+Proximamente spring validation - libreria Agregar dependencia desde vscode - en pom.xml ctrl+entr en link
 
 ![img.png](img.png)
 
@@ -168,6 +168,7 @@ http://localhost:8080/api/example/test/1
 - * https://armel.soro.io/handling-yaml-in-spring-rest-apis/
 - * (Handle Excep) https://reflectoring.io/spring-boot-exception-handling/
 - * (Handle Excep) https://www.toptal.com/java/spring-boot-rest-api-error-handling
+- * (Handle Excep) https://salithachathuranga94.medium.com/validation-and-exception-handling-in-spring-boot-51597b580ffd
 - * (validations) https://www.baeldung.com/spring-boot-bean-validation
 - * (validations) https://gustavopeiretti.com/spring-boot-rest-ejemplo-restcontroller-requestbody-valid/
 - * (validations) https://reflectoring.io/bean-validation-with-spring-boot/

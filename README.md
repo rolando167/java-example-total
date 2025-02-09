@@ -2,13 +2,15 @@
 ## Descripción del proyecto
 
 Este proyecto tiene base Example, para pruebas y uso en general, Crud al 99%.
-Try catcht, Junit, Mockito, handleError messageError, H2. application.yml (revisar)
+ * ✔ Try catcht, handleError messageError, H2. application.yml (revisar)
 
-Logs - Logger, configuracion en application.properties
+ * ✔ Logs - Logger, configuracion en application.properties
 
- Spring validation para DTO Crear - libreria Agregar dependencia desde vscode - en pom.xml ctrl+entr en link
+ * ✔ Spring validation para DTO Crear - libreria Agregar dependencia desde vscode - en pom.xml ctrl+entr en link
 
- Error Handle "ErrorMessage.java"- Formato JsonFormat Fecha con "jackson"
+ * ✔ Error Handle "ErrorMessage.java"- Formato JsonFormat Fecha con "jackson"
+
+ * ✔ ExampleControllerTest - Junit, Mockito
 
 ![img.png](img.png)
 
